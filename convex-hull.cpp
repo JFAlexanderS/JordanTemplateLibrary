@@ -31,9 +31,9 @@ double zcross(point i, point j)
     return i.x*j.y-i.y*j.x;
 }
 
-void getHull(int b, int e, int in, point hull[])
+void getHull(int b, int e, int inc, point hull[])
 {
-    for(int i=b; i!=e; i+=in)
+    for(int i=b; i!=e; i+=inc)
     {
         while(hullSize>=2 && zcross(hull[hullSize-1]-hull[hullSize], pList[i]-hull[hullSize])<=0)
             hullSize--;
