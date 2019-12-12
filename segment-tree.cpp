@@ -24,7 +24,7 @@ int query(int l, int r, int combine(int, int))
         if(l&1)
             leftRes=combine(leftRes, segmentTree[l++]);
         if(r&1)
-            rightRes=combine(rightRes, segmentTree[--r]);
+            rightRes=combine(segmentTree[--r], rightRes);
     }
     return combine(leftRes, rightRes);
 }
